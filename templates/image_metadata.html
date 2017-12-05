@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+
+<title>image API</title>
+
+{% endblock %}
+
+{% block content %}
+
+<h4>Image Metadata</h4>
+
+<div class='container-fluid'>
+    <div class='row'>
+    		<p><a href='/v1/image'>back to all</a></p>
+        <br>
+        <p>{{ image }}</p>
+        <br>
+        <p><a href='/v1/image/{{ image.id }}/data'>view image</a></p>
+    </div>
+    <div class='row'>
+      <form action="/v1/image/{{ image.id }}" method='post'>
+        Update image url:
+        <input type="url" name="image">
+        <input type="submit">
+      </form>
+    </div>
+</div>
+
+<script>
+"use strict";
+</script>
+
+{% endblock %}

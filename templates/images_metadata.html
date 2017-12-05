@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+
+<title>image API</title>
+
+{% endblock %}
+
+{% block content %}
+
+<h4>Images Metadata</h4>
+
+<div class='container-fluid'>
+    <div class='row'>
+    	{% for img in images %}
+    		<p>{{ img }}<a href='/v1/image/{{ img.id }}'>click</a></p>
+    	{% endfor %}
+    </div>
+    <div class='row'>
+      <form action="/v1/image" method='post'>
+        Add image url:
+        <input type="url" name="image">
+        <input type="submit">
+      </form>
+    </div>
+</div>
+
+<script>
+"use strict";
+</script>
+
+{% endblock %}

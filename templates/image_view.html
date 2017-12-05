@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+
+<title>image API</title>
+
+{% endblock %}
+
+{% block content %}
+
+<h4>Image Metadata</h4>
+
+<div class='container-fluid'>
+    <div class='row'>
+    		<p><a href='/v1/image'>back to all</a></p>
+	        <br>
+	        <p>{{ image }}</p>
+	        <br>
+    		<img src='{{ image.url }}' />
+    </div>
+</div>
+
+<script>
+"use strict";
+</script>
+
+{% endblock %}
